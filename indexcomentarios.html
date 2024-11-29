@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el tipo de documento como HTML5 y establece el idioma del documento a español -->
+<head><!-- Define los metadatos que vamos a usar y es donde se escribe el titulo de la pagina-->
+    <meta charset="utf-8"> <!-- Define la codificación de caracteres como UTF-8 para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el sitio sea responsivo, adaptándose a diferentes tamaños de pantalla -->
+    <title>Menu Principal</title> <!-- Define el título que aparecerá en la pestaña del navegador -->
+<link rel="stylesheet" href="styles.css"> <!-- Vincula una hoja de estilos externa llamada "styles.css" -->
+</head>
+
+<body> <!-- Cuerpo del documento donde se colocan los elementos visibles en la página -->
+    
+    <header> <!-- Encabezado del cuerpo -->
+        <h1>Menu Principal</h1>  <!-- Cabecera principal con un título -->
+    </header>
+
+    <main> <!-- Elemento principal del contenido del documento -->
+
+        <section id="inicio" class="contenedor visible"> <!-- Sección inicial visible por defecto -->
+            
+
+            <button onclick="mostrarSeccion('Tema 1')">Tema 1</button> <!-- Botón para mostrar la sección "sesion1" -->
+
+            <button onclick="mostrarSeccion('Tema 2')">Tema 2</button> <!-- Botón  para mostrar la sección "sesion2" -->
+
+            <button onclick="mostrarSeccion('Tema 3')">Tema 3</button> <!-- Botón  para mostrar la sección "sesion3" -->
+
+            <button onclick="mostrarSeccion('Tema 4')">Tema 4</button> <!-- Botón  para mostrar la sección "sesion4" -->
+       
+        </section>
+         
+
+               <section id="Tema 1" class="contenedor"> <!-- Sección para la "Sesión 1", inicialmente oculta -->
+
+            <h2>Tema 1: jUGADORES TOP</h2> <!-- Título de la sección -->
+
+            <ol> <!-- Lista ordenada -->
+
+                <li>Messi</li>
+                <li>Suarez</li>
+                <li>Neymar</li> <!-- Elementos de la lista ordenada -->
+            </ol>
+
+            <button onclick="mostrarSeccion('inicio')">Volver</button> <!-- Botón para volver a la sección inicial -->
+        </section>
+
+        <section id="Tema 2" class="contenedor"> <!-- Sección para la "Tema 2", inicialmente oculta -->
+
+            <h2>Tema 2: Lista Desordenada</h2> <!-- Título de la sección -->
+
+            <ul> <!-- Lista desordenada -->
+
+                <li>Pulsar NS200Fi</li>
+                <li>Gixxer 150</li>
+                <li>C90</li> <!-- Elementos de la lista desordenada -->
+            </ul>
+
+            <button onclick="mostrarSeccion('inicio')">Volver</button> <!-- Botón para volver a la sección inicial -->
+        </section>
+
+        <section id="Tema 3" class="contenedor"> <!-- Sección para la "Tema 3", inicialmente oculta -->
+
+            <h2>Tema 3: Tabla</h2> <!-- Título de la sección -->
+
+            <table> <!-- Tabla de datos -->
+
+                <thead> <!-- Encabezado de la tabla -->
+
+                    <tr>
+                        <th>Jugadores</th>
+                        <th>Vehiculos</th>
+                        <th>Lenguajes de programacion</th> <!-- Cabeceras de la tabla -->
+                    </tr><!-- define una fila de celdas en una tabla -->
+                </thead>
+
+                <tbody> <!-- Cuerpo de la tabla -->
+
+                    <tr> <!-- define una fila de celdas en una tabla -->
+                        <td>Messi</td>
+                        <td>Carro</td>
+                        <td>Html</td> <!-- Fila de datos -->
+                    </tr>
+
+                    <tr>
+                        <td>Cristiano</td>
+                        <td>Moto</td>
+                        <td>Css</td> <!-- Otra fila de datos -->
+                    </tr>
+                </tbody>
+            </table>
+
+            <button onclick="mostrarSeccion('inicio')">Volver</button> <!-- Botón para volver a la sección inicial -->
+        </section>
+
+        <section id="Tema 4" class="contenedor"> <!-- Sección para la "Sesión 4", inicialmente oculta -->
+
+            <h2>Tema 4: Text de vehiculo</h2> <!-- Título de la sección -->
+
+            <form> <!-- Inicio del formulario -->
+
+                <label for="nombre">Nombre:</label>
+               <!-- input:componente de formulario que permite a los usuarios ingresar datos--> <input id="nombre" name="nombre" type="text" required> <!-- Campo de texto para el nombre con validación requerida -->
+
+               <label for="email">Correo Electrónico:</label>
+                <input id="email" name="email" type="email" required> <!-- Campo de texto para el correo con validación de email requerida -->
+
+                <fieldset> <!-- Agrupación de campos relacionados -->
+
+                    <legend>Vehiculo:</legend> <!-- Título del grupo -->
+
+                    <label><input name="vehiculo" type="radio" value="masculino"> Carro</label>
+                    <label><input name="vehiculo" type="radio" value="femenino"> Moto</label> <!-- Opciones de vehiculo con botones de opción (radio) -->
+                </fieldset>
+
+                <label for="Marca">Marca:</label>
+                <select id="Marca" name="Marca"> <!-- Menú desplegable para seleccionar una Marca -->
+
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="lamborghini">lamborghini</option>
+                    <option value="Mclaren">Mclaren</option> <!-- Opciones del menú desplegable -->
+                </select>
+
+                <button type="submit">Enviar</button> <!-- Botón para enviar el formulario -->
+            </form>
+
+            <button onclick="mostrarSeccion('inicio')">Volver</button> <!-- Botón para volver a la sección inicial -->
+        </section>
+    </main>
+
+    <footer> <!-- Pie de página -->
+
+        <p>&copy; 2024 Derechos Reservados</p> <!-- Texto del pie de página con el símbolo de copyright y el año -->
+    </footer>
+
+    <script> // es un pequeño lenguaje de programación cuyo código se inserta dentro del documento HTML
+        function mostrarSeccion(seccionId) {
+            // Función que muestra la sección correspondiente al ID proporcionado
+
+            document.querySelectorAll('.contenedor').forEach((seccion) => {
+                // Selecciona todas las secciones y les quita la clase 'visible'
+                seccion.classList.remove('visible');
+            });
+
+            document.getElementById(seccionId).classList.add('visible');
+            // Agrega la clase 'visible' solo a la sección cuyo ID coincide con el parámetro
+        }
+    </script>
+</body>
+</html>
+
+
+
+

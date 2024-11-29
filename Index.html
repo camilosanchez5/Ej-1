@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Menu Principal</h1>
+    </header>
+    <main>
+        <section id="inicio" class="contenedor visible">
+            <button onclick="mostrarSeccion('sesion1')">Sesión 1</button>
+            <button onclick="mostrarSeccion('sesion2')">Sesión 2</button>
+            <button onclick="mostrarSeccion('sesion3')">Sesión 3</button>
+            <button onclick="mostrarSeccion('sesion4')">Sesión 4</button>
+        </section>
+        <section id="sesion1" class="contenedor">
+            <h2>Sesión 1: Lista Ordenada</h2>
+            <ol>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ol>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        <section id="sesion2" class="contenedor">
+            <h2>Sesión 2: Lista Desordenada</h2>
+            <ul>
+                <li>Elemento A</li>
+                <li>Elemento B</li>
+                <li>Elemento C</li>
+            </ul>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        <section id="sesion3" class="contenedor">
+            <h2>Sesión 3: Tabla</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Columna 1</th>
+                        <th>Columna 2</th>
+                        <th>Columna 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dato 1</td>
+                        <td>Dato 2</td>
+                        <td>Dato 3</td>
+                    </tr>
+                    <tr>
+                        <td>Dato A</td>
+                        <td>Dato B</td>
+                        <td>Dato C</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        <section id="sesion4" class="contenedor">
+            <h2>Sesión 4: Formulario</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" name="nombre" type="text" required>
+                <label for="email">Correo Electrónico:</label>
+                <input id="email" name="email" type="email" required>
+                <fieldset>
+                    <legend>Género:</legend>
+                    <label><input name="genero" type="radio" value="masculino"> Masculino</label>
+                    <label><input name="genero" type="radio" value="femenino"> Femenino</label>
+                </fieldset>
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="mx">México</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="es">España</option>
+                </select>
+                <button type="submit">Enviar</button>
+            </form>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Derechos Reservados</p>
+    </footer>
+    <script>
+        function mostrarSeccion(seccionId) {
+            document.querySelectorAll('.contenedor').forEach((seccion) => {
+                seccion.classList.remove('visible');
+            });
+            document.getElementById(seccionId).classList.add('visible');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

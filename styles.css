@@ -1,0 +1,124 @@
+body {    /* Aplica estilos generales al cuerpo de la página */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    min-height: 100vh; /* Establece una altura mínima del cuerpo igual al 100% de la altura de la ventana */
+    padding: 0; /* Elimina el relleno interno del body */
+    text-align: center; /* Centra el texto horizontalmente dentro del body */
+    background-image: url('futbolmessi.jpg');
+    /* Reemplaza 'fondo.jpg' con la ruta de tu imagen */
+
+    background-size: cover;
+    /* Ajusta la imagen para que cubra todo el fondo */
+
+    background-position: center;
+    /* Centra la imagen en el fondo */
+
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+     height: 50vh;
+    
+
+.content {
+    color: white;
+    text-align: center;
+    padding-top: 20%;
+
+
+}
+
+header, footer { /* Aplica estilos comunes al encabezado y al pie de página */
+    background-color: #33b2ff; /* Establece un color de fondo azul (solido) */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    padding: 10px 0; /* Agrega espacio interno (arriba y abajo) de 10 píxeles */
+}
+
+main { /* Estilos específicos para el contenido principal de la página */
+
+    flex: 1; /* Permite que el main crezca y ocupe el espacio disponible en un contenedor flex */
+
+    padding: 20px; /* Agrega espacio interno alrededor del contenido principal */
+}
+}
+
+footer { /* Estilos adicionales para el pie de página */
+    margin-top: auto; /* Empuja el footer hacia la parte inferior en un contenedor flex automaticamente */
+}
+
+.contenedor { /* Estilos generales para las secciones con clase "contenedor" */
+    display: none; /* Oculta inicialmente las secciones */
+    margin: 0 auto; /* Centra horizontalmente el contenedor automaticamente */
+    max-width: 600px; /* Limita el ancho máximo del contenedor a 600 píxeles */
+}
+
+.contenedor.visible { /* Estilo para mostrar el contenedor cuando tiene la clase "visible" */
+
+    display: block; /* Muestra el contenedor como un bloque */
+}
+
+h1, h2 { /* Estilos comunes para los títulos de nivel 1 y 2 */
+    color: white;
+    margin-bottom: 20px; /* Agrega un espacio inferior de 20 píxeles */
+}
+
+button { /* Estilos generales para los botones */
+ /* Establece un color de fondo azul */
+    background-color: #33b2ff; /* Establece un color de fondo azul (claro) */
+    border: none; /* Elimina el borde del botón */
+    color: white; /* Cambia el color del texto del botón a blanco */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el botón */
+    margin: 10px; /* Agrega un margen de 10 píxeles alrededor del botón */
+    padding: 10px 20px; /* Agrega espacio interno de 10 píxeles verticalmente y 20 horizontalmente */    
+}
+
+button:hover { /* Estilos para el botón cuando el mouse está encima (hover) */
+
+    background-color: #00509e; /* Cambia el color de fondo a un azul más oscuro */
+
+}
+
+form { /* Estilos generales para el formulario */
+    display: flex; /* Usa un diseño de flexbox para los elementos del formulario */
+
+    flex-direction: column; /* Alinea los elementos del formulario en una columna */
+    gap: 10px; /* Agrega un espacio de 10 píxeles entre los elementos */
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: white;
+}
+
+
+table { /* Estilos generales para las tablas */
+    border-collapse: collapse; /* Elimina el espacio entre los bordes de las celdas */
+    margin: 0 auto; /* Centra la tabla horizontalmente y automaticamente */
+    width: 100%; /* La tabla ocupa todo el ancho disponible */
+
+}
+
+
+th, td { /* Estilos para las celdas de encabezado y cuerpo de la tabla */
+    border: 1px solid #ddd; /* Agrega un borde gris claro a las celdas */
+    padding: 8px; /* Agrega espacio interno de 8 píxeles en las celdas */    
+}
+
+
+th { /* Estilos específicos para las celdas de encabezado */
+    background-color: #33b2ff; /* Establece un color de fondo azul claro para los encabezados */
+}
+
+ul, ol { /* Estilos generales para listas ordenadas y desordenadas */
+    margin: 0 auto; /* Centra las listas horizontalmente automaticamente*/
+    max-width: 300px; /* Limita el ancho máximo de las listas a 300 píxeles */
+    text-align: left; /* Alinea el texto de las listas a la izquierda */
+    color: white;
+} 
+
+
+footer p { /* Estilos específicos para los párrafos dentro del pie de página */
+    font-size: 10px; /* Define un tamaño de fuente de 14 píxeles */
+
+
+}
+
+
+
+td  {
+color: white;
+}
